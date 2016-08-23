@@ -1,0 +1,549 @@
+/* scma styles, wrapped up with cutestrap */
+
+/* remove stupid text adjustment for safari iphone */
+html {-webkit-text-size-adjust: none;}
+
+/* remove stupid box model from block elements */
+div,
+section,
+main,
+:after, :before {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	padding-top: 2.4rem;
+}
+
+/* utility class for line breaks */
+.line { display: inline-block; }
+
+
+/* off canvas menu related styles */
+#site-wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+#site-canvas {
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translateZ(0) translateX(0);
+	-moz-transform: translateZ(0) translateX(0);
+	transform: translateZ(0) translateX(0);
+	transition: .3s ease all;
+}
+
+.mobile {
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -200px;
+	background: #666;
+	padding: 15px 0;
+	box-sizing: border-box;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid #555;
+		border-bottom: 1px solid #777;
+	
+		li {
+
+			border-bottom: 1px solid #555;
+			border-top: 1px solid #777;
+			display: block;
+			padding: 0.75rem 0 0.75rem 1rem;
+
+			a {
+				display: inline-block;
+				position: relative;
+				font-weight: bold;
+				text-decoration: none;
+				transition: 0.3s ease all;
+
+				&:link,
+				&:hover,
+				&:visited,
+				&:active {
+					color: $white;
+				}
+
+				&:hover {
+					color: $orange;
+				}
+			}
+		}
+	}
+}
+
+/* hook to add class for css animation effect */
+#site-wrapper.show-nav #site-canvas {
+	transform: translateZ(0) translateX(200px);
+}
+
+/* trapping all header elements */
+header {
+	background: $black;
+	position: relative;
+
+	h1 {
+		color: $white;
+		text-align: center;
+		transition: all 0.3s ease;
+
+		a {
+			&:link,
+			&:hover,
+			&:focus,
+			&:visited,
+			&:active {
+				color: $white;
+			}
+
+			&:after {
+				position: static;
+				border: 0;
+			}
+		}
+	}
+
+	#menu-trigger {
+		border-color: #fff;
+		left: 1rem;
+		position: absolute;
+		top: 0.75rem;
+		background: #444;
+		height: auto;
+		width: auto;
+		border: 1px solid $white;
+		padding: 0;
+		border-radius: 3px;
+		display: none;
+		padding: 0.5rem;
+
+
+		.icon-bar {
+			border-radius: 1px;
+			display: block;
+			height: 3px;
+			width: 24px;
+			color: $white;
+			background: $white;
+			margin-bottom: 0.4rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	& > .desktop {
+		border-top: 8px solid $yellow;
+		background: $orange;
+
+		& > ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			justify-content: space-around;
+
+			& > li {
+				display: inline-block;
+				text-align: center;
+				position: relative;
+
+				& > a {
+					font-weight: bold;
+					text-decoration: none;
+					display: block;
+					text-transform: uppercase;
+
+					&:link {
+						color: $black;
+					}
+
+					&:visited {
+						color: $black;
+					}
+
+					&:after {
+						border: 0;
+					}
+				}
+			}
+
+			#li-philosophy {
+
+				ul {
+					margin: 0;
+					padding: 12px 0 8px 0;
+					left: 0;
+					position: absolute;
+					width: 225px;
+					list-style: none;
+					text-align: left;
+					font-size: 1.5rem;
+					background: rgba(221, 221, 221, 0.98);
+					border-bottom-right-radius: 8px;
+					border-bottom-left-radius: 8px;
+					opacity: 0;
+					transition: opacity .25s ease-in-out;
+					z-index: -1;
+
+					li {
+						padding-left: 1rem;
+
+						a {
+							&:hover,
+							&:after,
+							&:hover:after { border: 0; }
+						}
+					}
+				}
+
+				&:hover {
+					ul {
+						opacity: 1;
+						z-index: 10;
+						
+						a:after { border: 0; }
+					}
+				}
+			}
+
+		} 
+	}
+}
+
+/* styles for content area, regardless of which column */
+main h2,
+main h3,
+main h4,
+main h5 {
+	font-weight: bold;
+}
+
+/* left column content area */
+.column--heavy {
+
+	h2 {
+		padding: 0;
+	}
+
+	h3 {
+		color: $white;
+		font-weight: normal;
+		font-size: 2.2rem;
+		line-height: 2.25rem;
+		padding: 0.5rem 0.75rem;
+		text-align: center;
+		background: $black;
+		margin-bottom: 1rem;
+	}
+
+	img {
+		border-radius: 2.5rem 0;
+
+		&.adult-sidekick {
+			float: right;
+			margin: 0 0 0.5rem 0.5rem;
+		}
+
+		&.adult-throw {
+			max-width: 50%;
+			float: left;
+			margin: 0 0.75rem 0.25rem 0;
+		}
+	}
+
+	.main-carousel {
+		margin-top: 1rem;
+
+		img {
+			border-radius: 0;
+		}
+	}
+}
+
+/* treatment for floats on adult program page */
+
+/* right column content area */
+.content--right {
+	padding-top: 2rem;
+
+	img {
+		margin: 0 0 1rem;
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.sidebar-item {
+	h5 {
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 1.25em;
+	}
+}
+
+footer {
+	color: $white;
+	background: $black;
+	box-shadow: 
+		0 0 0 6px $yellow,
+		0 0 0 20px $orange;
+
+	.column {
+		position: relative;
+	}
+
+	a {
+		display: inline-block;
+		position: relative;
+
+		&:link,
+		&:hover,
+		&:visited,
+		&:active {
+			color: $white;
+			text-decoration: none;
+		}
+
+		&:after {
+			content: '';
+
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+
+			border-width: 0 0 1px;
+			border-style: dotted;
+		}
+
+		&:hover:after {
+			border-bottom-width: 0;
+		}
+	}
+
+	.grid {
+		line-height: 2rem;
+	}
+
+	address {
+		font-style: italic;
+	}
+}
+
+/* steady state carats */
+#body-adults #li-adults:after,
+#body-calendar #li-calendar:after,
+#body-children #li-children:after,
+#body-contact #li-contact:after,
+#body-home #li-home:after,
+#body-instructors #li-instructors:after,
+#body-philosophy #li-philosophy:after {
+	width: 0;
+	height: 0;
+	content: '';
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 12px solid rgb(255, 128, 0);
+	position: absolute;
+	left: calc(50% - 10px);
+	z-index: 15;
+}
+
+/* glyphicon stuff */
+@font-face {
+	font-family:'Glyphicons Halflings';
+	src:url(../fonts/glyphicons-halflings-regular.eot);
+	src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),
+	url(../fonts/glyphicons-halflings-regular.woff) format('woff'),
+	url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),
+	url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+.glyphicon {
+	position: absolute;
+	top: 4px;
+	left: -9px;
+	display: inline;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.glyphicon-envelope { top: 30px; left: -12px; }
+
+.glyphicon-envelope:before{content:"\2709";}
+.glyphicon-map-marker:before{content:"\e062"; }
+.glyphicon-phone:before{content:"\e145"}
+
+/* images */
+img#bagwa-chung {
+	float: left;
+	margin: 0 1rem 1rem 0;
+	width: 30%;
+}
+
+img#kom-do,
+img#kong-su,
+img#ship-pal-gae {
+	margin: 1rem 0;
+	width: 100%;
+}
+
+img#tai-chi {
+	float: right;
+	margin: 0 0 1rem 1rem;
+	width: 50%;
+}
+
+/* contact form stuff */
+#body-contact h4 {
+	padding: 0;
+	margin: 0 0 0.25rem 0;
+}
+
+#body-contact input,
+#body-contact textarea {
+	border: 1px solid #000;
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+	width: 98%;
+}
+
+#body-contact textarea {
+	height: 10rem;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+#body-contact form button {
+	border-radius: 4px;
+	background: $orange;
+	font-weight: bold;
+	font-size: 1.25em;
+	transition: .3s ease all;
+}
+
+#body-contact address {
+	margin-top: 0.25rem;
+}
+
+#feedback span {
+	color: green;
+	font-size: 2rem;
+}
+
+.validation01 {
+	position: relative;
+}
+
+#body-contact input:focus,
+#body-contact textarea:focus {
+	background: #FFFFF8;
+	outline: 0;
+}
+
+#body-contact input:required + .validation01 span.valid,
+#body-contact input:required + .validation01 span.invalid,
+#body-contact textarea:required + .validation01 span.valid,
+#body-contact textarea:required + .validation01 span.invalid {
+	display: none;
+	position: absolute;
+	left: 94%;
+	top: -26px;
+	font-size: 3rem;
+}
+
+#body-contact textarea:required + .validation01 span.valid,
+#body-contact textarea:required + .validation01 span.invalid {
+	top: -70px;
+}
+
+#body-contact input:focus:required:invalid + .validation01 span.invalid,
+#body-contact textarea:focus:required:invalid + .validation01 span.invalid {
+	display: block;
+}
+
+#body-contact input:focus:required:valid + .validation01 span.valid,
+#body-contact textarea:focus:required:valid + .validation01 span.valid {
+	display: block;
+}
+
+@media (min-width: 599px) and (max-width: 959px) {
+	.glyphicon-envelope {
+		top: 24px;
+	}
+}
+
+@media (max-width: 599px) {
+
+	html {
+		header {
+
+			h1 {
+				font-size: 2.4rem;
+				padding: 0;
+				margin: 0;
+			}
+
+			#menu-trigger {
+				display: block;
+			}
+
+			& > .desktop > ul {
+				height: 8px;
+
+				& > li {
+					display: none;
+				}
+			}
+		}
+
+		#body-contact form button {
+			font-size: 1.75rem;
+			height: 4rem;
+			line-height: 1rem;
+		}
+
+		.content--right {
+			img {
+				margin: 0 auto 1rem;
+				max-width: 50%;
+			}
+		}
+
+		footer .column {
+			margin-bottom: 1rem;
+			padding-left: 1.5rem;
+
+			.glyphicon {
+				left: -4px;
+			}
+
+			.glyphicon-envelope {
+				top: 24px;
+			}
+		}	
+	}
+}
