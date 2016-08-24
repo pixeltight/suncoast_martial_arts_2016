@@ -11,7 +11,8 @@
 		cellAlign: 'left',
 		contain: true,
         imagesLoaded: true,
-        wrapAround: true
+        wrapAround: true,
+        autoPlay: 5000
 	});
 
 	// handle contact form
