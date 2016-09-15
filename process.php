@@ -6,7 +6,8 @@ $recipient = "info@suncoastmartialarts.com"; // Recipients Email Address
 $subject = "SuncoastMartialArts.com Contact Form Submission"; // Email Subject
 
 $message = "- Name: " . $_POST['name'] . "\r\n";
-$message .= "- Email: " . $_POST['email'] . "\r\n\r\n";
+$message .= "- Email: " . $_POST['email'] . "\r\n";
+$message .= "- Program Type: " . $_POST['program_type'] . "\r\n\r\n"
 $message .= "- Message: " . $form_message . " \r\n";   
 
 /* additional headers */

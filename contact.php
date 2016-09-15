@@ -34,34 +34,41 @@
 							<a href="tel:+17273279800">(727) 327-9800</a><br>
 						</address>             
 						<form action="" id="contact_form" method="post" role="form" class="">
-                            <div>
-                                <label for="name" class="">Name</label>
-                                <input type="text" id="name" name="name" required>
-                                <p class="validation01">
-                                    <span class="valid" style="color: green">&#10004;</span>
-                                    <span class="invalid" style="color: #900">&#10008;</span>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="email" class="">Email</label>
-                                <input type="email" id="email" name="email" value="" class="form-control" required>
-                                <p class="validation01">
-                                    <span class="valid" style="color: green">&#10004;</span>
-                                    <span class="invalid" style="color: #900">&#10008;</span>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="message" class="">Message</label>
-                                <textarea id="message" name="message" value="" class="form-control" required></textarea>
-                                <p class="validation01">
-                                    <span class="valid" style="color: green">&#10004;</span>
-                                    <span class="invalid" style="color: #900">&#10008;</span>
-                                </p>
-                            </div>
-                            <div>
-                                <button class="">Send</button>
-                            </div>
-                        </form>
+							<div>
+								<label for="name" class="">Name</label>
+								<input type="text" id="name" name="name" required>
+								<p class="validation01">
+									<span class="valid" style="color: green">&#10004;</span>
+									<span class="invalid" style="color: #900">&#10008;</span>
+								</p>
+							</div>
+							<div>
+								<label for="email" class="">Email</label>
+								<input type="email" id="email" name="email" value="" class="form-control" required>
+								<p class="validation01">
+									<span class="valid" style="color: green">&#10004;</span>
+									<span class="invalid" style="color: #900">&#10008;</span>
+								</p>
+							</div>
+							<div>
+								<label for="program_type" class="">Program Type</label>
+								<select id="program_type" name="program_type">
+									<option value="children" checked>Children</option>
+									<option value="adult" checked>Adult</option>
+								<select>
+							</div>
+							<div>
+								<label for="message" class="">Message</label>
+								<textarea id="message" name="message" value="" class="form-control" required></textarea>
+								<p class="validation01">
+									<span class="valid" style="color: green">&#10004;</span>
+									<span class="invalid" style="color: #900">&#10008;</span>
+								</p>
+							</div>
+							<div>
+								<button class="">Send</button>
+							</div>
+						</form>
 					</div>
 					<?php include('php_includes/scma_right_colum.php'); ?>
 				</section>

@@ -1144,6 +1144,13 @@ main h5 {
   line-height: 1.25em;
 }
 
+.sidebar-item a span {
+  color: #B00;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 footer {
   color: #ffffff;
   background: #000;
@@ -1261,11 +1268,17 @@ img#tai-chi {
 }
 
 #body-contact input,
-#body-contact textarea {
+#body-contact textarea,
+#body-contact select {
   border: 1px solid #000;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
   width: 98%;
+}
+
+#body-contact select {
+  margin-bottom: 1.25em;
+  width: 100%;
 }
 
 #body-contact textarea {

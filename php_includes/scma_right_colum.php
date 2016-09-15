@@ -2,7 +2,7 @@
 	<img src="assets/img/scma-logo.png" alt="suncoast martial arts logo" title="suncoast martial arts logo">
 	<div class="sidebar-item">
 		<h5>Join our classes</h5>
-		<p><a href="philosophy.php" title="8 styles of martial arts">A combination of martial arts</a> are taught to our students as a single style in our Group &#38; Private Lessons</p>
+		<p>We offer a <a href="../contact.php"><span>FREE</span> week of classes</a> for our children's and adult's program. Sign up now to hold your place!</p>
 	</div>
 	<div class="sidebar-item">
 		<h5>After School Programs</h5>
