@@ -1366,9 +1366,5 @@ img#tai-chi {
     top: 24px;
   }
 }
-a {
-  width: calc(50% - 2em);
-  transition: transform 1s;
-}
 
 /*# sourceMappingURL=cutestrap.css.map */
